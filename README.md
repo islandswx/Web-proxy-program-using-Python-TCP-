@@ -40,3 +40,16 @@ in the cache (and files are created as above). The prefetching is implemented by
 If the client requests the page later (within the timeout value), the file is sent from cache.
 
 Errors shall be received for invalid method, http type, etc.
+
+
+
+I find that on Windows you can change the console encoder to utf-8 or other encoder that can represent your data. Then you can print it to sys.stdout.
+First, run following code in the console (command prompt):
+
+chcp 65001
+<Enter>
+set PYTHONIOENCODING=utf-8
+<Enter>
+
+Then, start the webproxy as instructed above.
+
