@@ -41,15 +41,17 @@ If the client requests the page later (within the timeout value), the file is se
 
 Errors shall be received for invalid method, http type, etc.
 
-
+Note:
+While implementing cache, this program shall actually write the cache files in your program directory. However, the files have been 'written' including the header part so they will not open properly. You can edit the program to 'write' only the data part.
+Also, if you do not want cache files to get 'written' in your directory, you could implement it using dictionary key-value pair.
 
 I find that on Windows you can change the console encoder to utf-8 or other encoder that can represent your data. Then you can print it to sys.stdout.
 First, run following code in the console (command prompt):
 
-chcp 65001
-<Enter>
-set PYTHONIOENCODING=utf-8
-<Enter>
+chcp 65001 (Then press ENTER)
+
+set PYTHONIOENCODING=utf-8 (Then press ENTER)
+
 
 Then, start the webproxy as instructed above.
 
